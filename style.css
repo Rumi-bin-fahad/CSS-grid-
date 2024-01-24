@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body{
+    font-family: 'poppins',sans-serif;
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+}
+header{
+    margin: 0px;
+    padding: 0px;
+}
+.name{
+    text-align: center;
+    color: white;
+    font-size: larger;
+    padding: 0px;
+    margin: 0px;
+    padding-bottom: 10px;
+}
+.parent{
+    max-width: 500px;
+    border: 2px solid black;
+    margin: 0 auto;
+    justify-content: center;
+    display: grid;
+    background-color: black;
+    max-height: 530px;
+    box-shadow: 0 0 30px rgb(0, 201, 252);
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 10px;
+    grid-template-rows: repeat(6, minmax(50px ,80px)) ;
+    padding: 10px;
+    text-align: center;
+    gap: 10px;
+}
+.one{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background: linear-gradient(45deg, #110347, #1100ff, #00fff2);
+    color: white;
+}
+.two{
+    grid-row-start: 2;
+    grid-row-end: 6;
+    background: linear-gradient(45deg, #110347, #1100ff, #00fff2);
+    grid-template-row: minmax(20px , 50px);
+    background-color: blue;
+    color: white;
+}
+.three{
+    grid-column-start: 2;
+    grid-column-end: 5;
+    background: linear-gradient(45deg, #110347, #1100ff, #00fff2);
+    background-color: green;
+    color: white;
+}
+.four{
+    grid-row-start: 3;
+    grid-row-end: 5;
+    background: linear-gradient(45deg, #110347, #1100ff, #00fff2);
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-color: orange;
+    color: white;
+}
+.five{
+    grid-row-start: 3;
+    grid-row-end: 5;
+    grid-column-start: 3;
+    grid-column-end: 5;
+    color: white;
+    background: linear-gradient(45deg, #110347, #1100ff, #00fff2);
+    background-color: lightgreen;
+}
+.six{
+grid-column-start: 2;
+    grid-column-end: 5;
+    background: linear-gradient(45deg, #110347, #1100ff, #00fff2);
+    background-color: yellow;
+    color: white;
+}
+.seven{
+    grid-column-start: 1;
+    grid-column-end: 5;
+    background-color: red;
+    background: linear-gradient(45deg, #110347, #1100ff, #00fff2);
+    color: white;
+}
+.parent >div{
+    /* height: 40px; */
+    border: 1px solid black;
+    overflow: hidden;
+    align-items: center;
+    display: flex;
+    border-radius: 10px;
+    justify-content: center;
+}
+@media (max-width:700px){
+    .parent{
+        grid-template-columns: repeat(3, 1fr);
+        max-height: 550px;
+        grid-template-rows: repeat(8, minmax(40px ,80px));
+    }
+}
+@media (max-width:700px){
+    body{
+        background: white;
+    }
+    .name{
+        color: black;
+    }
+    .parent{
+        background-color : white;
+        max-height:530px ;
+        box-shadow: 0 0 20px black;
+    }
+    .one{
+        background: black;
+    }
+    .two{
+        background: blue;
+    }
+    .three{
+        background: green;
+    }
+    .four{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        background: orange;
+    }
+    .five{
+        background: lightgreen;
+        color: black;
+    }
+    .six{
+        background: yellow;
+        color: black;
+    }
+    .seven{
+        background: red;
+    }
+
+}
+@media (max-width:500px){
+    body{
+        background-color: black;
+    }
+    .name{
+        color: white;
+    }
+    .parent{
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(8, minmax(20px, 60px));
+        border: none;
+        transition: 0.6s;
+        max-height: 550px;
+        background-color: #2ffff5;
+    }
+    header{
+        filter: grayscale(9);
+    }
+    .parent >div{
+        border: none;
+    }
+    .one{
+        filter: grayscale(9);
+    }
+      .two{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        grid-row-start: 2;
+        grid-row-end: 2;
+        filter: grayscale(8);
+    } 
+    .three{
+        grid-column-start: 1;
+    grid-column-end: 5;
+    grid-row-start: 3;
+    grid-row-end: 3;
+    filter: grayscale(9);
+    }
+    .four{
+        grid-row-start: 4;
+        grid-row-end: 5;
+        grid-column-start:1 ;
+        grid-column-end: 5;
+        filter: grayscale(9);
+    }
+    .five{
+        grid-row-start: 5;
+        grid-row-end: 5;
+        filter: grayscale(9);
+        grid-column-start: 1;
+        grid-column-end: 5;
+    }
+    .six{
+        grid-column-start: 1;
+        grid-column-end: 5;
+        filter: grayscale(13);
+        background-color: rgb(244, 244, 1);
+    }
+    .seven{
+        grid-row-start: 7;
+        grid-row-end: 9;
+        grid-column-start: 1;
+        grid-column-end: 5;
+        background: linear-gradient(90deg, #7f7a7a, #1d1d1d);
+    }
+}
